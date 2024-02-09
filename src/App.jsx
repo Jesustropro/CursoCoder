@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 function App() {
   const [allProducts, setAllProducts] = useState([]);
-  const [total, setTotal] = useState(0);
+  const [Total, setTotal] = useState(0);
   const [countProducts, setCountProducts] = useState(0);
 
   return (
@@ -13,7 +13,7 @@ function App() {
       <NavBar
         allProducts={allProducts}
         setAllProducts={setAllProducts}
-        total={total}
+        Total={Total}
         setTotal={setTotal}
         countProducts={countProducts}
         setCountProducts={setCountProducts}
@@ -21,7 +21,7 @@ function App() {
       <ItemListContainer
         allProducts={allProducts}
         setAllProducts={setAllProducts}
-        total={total}
+        Total={Total}
         setTotal={setTotal}
         countProducts={countProducts}
         setCountProducts={setCountProducts}

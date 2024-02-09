@@ -1,19 +1,58 @@
 import React from "react";
+import { useState } from "react";
 
-const NavBar = () => {
+const NavBar = ({
+  allProducts,
+  setAllProducts,
+  Total,
+  setTotal,
+  countProducts,
+  setCountProducts,
+}) => {
+  const [Active, setActive] = useState(false);
+
+  const onDeleteProduct = (product) => {
+    const results = allProducts.filter((item) => item.id !== product.id);
+
+    setTotal(Total - product.price * product.quantity);
+    setCountProducts(countProducts - product.quantity);
+    setAllProducts(results);
+  };
+
+  const onCleanCart = () => {
+    setAllProducts([]);
+    setTotal(0);
+    setCountProducts(0);
+  };
+
   return (
     <>
       <header>
-        <h1>Legend Shop</h1>
+        <h1 className="logo">Mi E-commerce</h1>
 
         <ul className="nav-list">
-          <li><a className="nav-item" href="Productos">Productos</a></li>
-          <li><a className="nav-item" href="Contacto">Contacto</a></li>
-          <li><a className="nav-item" href="Ubicación">Ubicación</a></li>
+          <li>
+            <a className="nav-item" href="Productos">
+              Productos
+            </a>
+          </li>
+          <li>
+            <a className="nav-item" href="Contacto">
+              Contacto
+            </a>
+          </li>
+          <li>
+            <a className="nav-item" href="Ubicación">
+              Ubicación
+            </a>
+          </li>
         </ul>
 
         <div className="container-icon">
-          <div className="container-cart-icon">
+          <div
+            className="container-cart-icon"
+            onClick={() => setActive(!Active)}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -29,40 +68,60 @@ const NavBar = () => {
               />
             </svg>
             <div className="count-products">
-              <span id="contador-productos">0</span>
+              <span id="contador-productos">{countProducts}</span>
             </div>
           </div>
 
-          <div className="container-cart-products hidden-cart">
-            <div className="row-product hidden">
-              <div className="cart-product">
-                <div className="info-cart-product">
-                  <span className="cantidad-producto-carrito">1</span>
-                  <p className="titulo-producto-carrito">Zapatos Nike</p>
-                  <span className="precio-producto-carrito">$80</span>
+          <div
+            className={`container-cart-products ${Active ? "" : "hidden-cart"}`}
+          >
+            {allProducts.length ? (
+              <>
+                <div className="row-product">
+                  {allProducts.map((product) => (
+                    <div className="cart-product" key={product.id}>
+                      <div className="info-cart-product">
+                        <span className="cantidad-producto-carrito">
+                          {product.quantity}
+                        </span>
+                        <p className="titulo-producto-carrito">
+                          {product.nameProduct}
+                        </p>
+                        <span className="precio-producto-carrito">
+                          ${product.price}
+                        </span>
+                      </div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="currentColor"
+                        className="icon-close"
+                        onClick={() => onDeleteProduct(product)}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </div>
+                  ))}
                 </div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="icon-close"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </div>
-            </div>
 
-            <div className="cart-total hidden">
-              <h3>Total:</h3>
-              <span className="total-pagar">$200</span>
-            </div>
-            <p className="cart-empty">El carrito está vacío</p>
+                <div className="cart-total">
+                  <h3>Total:</h3>
+                  <span className="total-pagar">${Total}</span>
+                </div>
+
+                <button className="btn-clear-all" onClick={onCleanCart}>
+                  Vaciar carrito
+                </button>
+              </>
+            ) : (
+              <p className="cart-empty">El carrito está vacío</p>
+            )}
           </div>
         </div>
       </header>

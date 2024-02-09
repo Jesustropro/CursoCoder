@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <h2 className='pie'>Legend Shop</h2>
+    <h2 className='pie'>Mi E-commerce</h2>
   )
 }
 

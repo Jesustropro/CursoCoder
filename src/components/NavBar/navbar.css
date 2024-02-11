@@ -1,0 +1,47 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  text-shadow: 3px 6px 3px rgba(0, 0, 0, 0.692);
+  color: lime;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 100;
+}
+
+.nav-list {
+  margin-top: auto;
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-item {
+  margin: 0 25px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+}
+
+.nav-list :hover {
+  transform: scale(1.1);
+  color: #000;
+  font-weight: 600;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 50px 0;
+}

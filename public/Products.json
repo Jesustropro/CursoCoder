@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "nombre": "Zapatillas",
+    "img": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "precio": 80,
+    "stock": 24,
+    "description": "Calzado de la mejor calidad",
+    "categoria": "Calzado"
+  },
+  {
+    "id": 2,
+    "nombre": "Reloj",
+    "img": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1099&q=80",
+    "precio": 40,
+    "stock": 18,
+    "description": "Reloj soft alta resistencia",
+    "categoria": "Accesorios"
+  },
+  {
+    "id": 3,
+    "nombre": "Smartwatch",
+    "img": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+    "precio": 60,
+    "stock": 12,
+    "description": "Reloj inteligente última generación",
+    "categoria": "Accesorios"
+  },
+  {
+    "id": 4,
+    "nombre": "Perfume",
+    "img": "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+    "precio": 70,
+    "stock": 14,
+    "description": "Fragancia única para damas",
+    "categoria": "Perfumería"
+  },
+  {
+    "id": 5,
+    "nombre": "Audifonos",
+    "img": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "precio": 30,
+    "stock": 33,
+    "description": "Un audio más nítido",
+    "categoria": "Accesorios"
+  },
+  {
+    "id": 6,
+    "nombre": "Gafas",
+    "img": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "precio": 20,
+    "stock": 44,
+    "description": "Gafas de sol para hombres",
+    "categoria": "Accesorios"
+  }
+]

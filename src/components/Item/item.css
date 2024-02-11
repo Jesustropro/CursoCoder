@@ -1,0 +1,36 @@
+img {
+  width: 14rem;
+  height: 14rem;
+  border-radius: 12px;
+}
+
+.nombre {
+  padding: 10px 0;
+  font-size: 28px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #333;
+}
+
+.precio {
+  font-size: 23px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px;
+  margin: auto;
+  transition: box-shadow 1.6s ease;
+}
+
+.container:hover img {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.642);
+  transform: scale(1.03);
+  border: solid #333;
+  border-radius: 6px;
+}

@@ -1,0 +1,41 @@
+.item {
+  margin: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img {
+  width: 18rem;
+  height: 18rem;
+}
+
+.nombre {
+  padding: 10px 0;
+  font-size: 33px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #333;
+}
+
+.precio {
+  padding: 10px 0;
+  font-size: 23px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  color: #333;
+}
+
+.info-product {
+  padding: 10px 0;
+  font-size: 21px;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  color: #333;
+}
+
+.stock {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}

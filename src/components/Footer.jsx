@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
-  return (
-    <h2 className='pie'>Mi E-commerce</h2>
-  )
-}
+  return <h2 className="pie">algo así</h2>;
+};
 
 export default Footer;
